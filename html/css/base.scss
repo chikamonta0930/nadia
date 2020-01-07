@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+/*#########################################################
+
+基本設定
+
+#########################################################*/
+// 基本単位
+$unit: 1rem;
+$mg: 10px;
+
+// カラー
+$c-bg: #fff;	// 背景色
+$c-font: #252f39;	// フォントカラー
+$c-line: #959595;	// 線の色
+$c-anchor: #000;	// リンク色
+$c-anchor-hover: #959595;	// ホバー時のリンク色
+$c-anchor-active: #00a0e9; // アクティブ時のリンク色
+$c-anchor-visited: $c-anchor; // 訪問済み時のリンク色
+$c-anchor-focus: $c-anchor-hover; // フォーカス時のリンク色
+
+// フォント
+$fontsize: 16;	// フォントサイズ
+$font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Helvetica Neue", Helvetica, Arial, "メイリオ", Meiryo, sans-serif;	// フォントの種類
+
+/* ========================================================
+mixin mq用の変数設定
+=========================================================*/
+/*
+▼iOSデバイス
+iPhone5: 320 × 568
+iPhone7: 375 × 667(1334x750)
+iPhone7 Plus: 414 × 736(1920x1080)
+iPad/iPad Mini: 768 × 1024
+iPad Pro: 1024 × 1366
+
+▼ブートストラップ
+xs： ～767px
+sm： 768～991px
+md： 992～1119px
+lg： 1120px～
+*/
+$screen-sm-max: 767px;	// スマホ表示の最大値
+$screen-md-max: 1023px;	// タブレット表示の最大値
+
+
+/*#########################################################
+
+mixin
+
+#########################################################*/
+
+/* ========================================================
+メディアクエリ用Mixin
+=========================================================*/
+@mixin mq($breakpoint) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+/*
+ステップ1.モバイルファーストかデスクトップファーストかを選ぶ
+ステップ2.該当する設定を有効化、その他をコメントアウトする。
+ステップ3.選択したタイプにより、「▼モバイルファーストの例」、「▼デスクトップファーストの例」のどちらかを参考にブレイクポイントを設定する。
+→実際の設定は_base.scssではなく、インポート元で行う。
+*/
+
+// ステップ2：モバイルファースト用（デスクトップファーストの場合はコメントアウト）
+$breakpoints: (
+	// タブレット
+	'md': 'screen and (min-width: ' + ($screen-sm-max + 1) + ') and (max-width: ' + ($screen-md-max) + ')',
+	// デスクトップ
+	'lg': 'screen and (min-width: ' + ($screen-sm-max + 1) + ')',
+) !default;
+
+/*
+// ステップ3：▼モバイルファーストの例
+// メディアクエリのブロック外にベースになるCSSを書く。
+// モバイルファーストでは小さい画面サイズから順々に指定。
+main{
+	// デフォルト
+	background: yellow;
+	// タブレット
+	@include mq(md){
+		background: orange;
+	}
+	// デスクトップ
+	@include mq(sm){
+		background: red;
+	}
+}
+//------------------------------
+*/
+
+/*
+// ステップ2：デスクトップファースト用（モバイルファーストの場合はコメントアウト）
+$breakpoints: (
+	// タブレット
+	'md': 'screen and (min-width: ' + ($screen-sm-max + 1) + ') and (max-width: ' + $screen-md-max + ')',
+	// スマートフォン
+	'sm': 'screen and (max-width: ' + $screen-sm-max + ')',
+) !default;
+
+*/
+
+/*
+// ステップ3：▼デスクトップファーストの例
+// メディアクエリのブロック外にベースになるCSSを書く。
+// デスクトップファーストでは大きい画面サイズから順々に指定。
+main{
+	// デフォルト
+	background: red;
+	// タブレット
+	@include mq(md){
+		background: orange;
+	}
+	// スマートフォン
+	@include mq(sm){
+		background: yellow;
+	}
+}
+//------------------------------
+*/
+
+
+/* ========================================================
+remを使ったfont-size指定
+$baseが16なのは、一般的なブラウザのfont-sizeの初期値が16pxのため↩
+=========================================================*/
+@mixin fontsize($size: 24, $base: 16) {
+	font-size: $size + px;
+	font-size: ($size / $base) * 1rem;
+}
+
+/* ========================================================
+リンクカラーの設定
+=========================================================*/
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+	color: $normal;
+	@if $visited {
+		&:visited {
+			color: $visited;
+		}
+	}
+	@if $focus {
+		&:focus {
+			color: $focus;
+		}
+	}
+	@if $hover {
+		&:hover {
+			color: $hover;
+		}
+	}
+	@if $active {
+		&:active {
+			color: $active;
+		}
+	}
+}
+
+
+/*#########################################################
+
+要素関連（リセットCSSの種類によっては不要）
+
+#########################################################*/
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	font-size: 16px; // モダンブラウザのデフォルト値
+	font-family: $font-family;
+	background-color: $c-bg;
+}
+p {
+	line-height: 1.8;
+}
+a {
+	// 通常時の文字色、:hover、:active、:visited、:focus
+	@include link-colors($c-anchor, $c-anchor-hover, $c-anchor-active, $c-anchor, $c-anchor-hover);
+	transition: all 0.5s ease-out;
+}
