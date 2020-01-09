@@ -42,14 +42,14 @@ a{
 
 
 main{
-
+  font-family: "Yu Mincho", "YuMincho", serif;
 
   /* ========================================================
   ヘッダー
   =========================================================*/
 
   .header{
-    font-family: "Yu Mincho", "YuMincho", serif;
+
 
     .visual{
       img{
@@ -156,7 +156,7 @@ main{
 
 
   .contact-box{
-    margin: 0 auto;
+    margin: 0 auto 150px;
     width: 100%;
     max-width: 960px;
 
@@ -188,6 +188,56 @@ main{
   /* ========================================================
   選ばれる理由
   =========================================================*/
+
+  .reason{
+    section{
+      .tit{
+        position: relative;
+        margin: 0 0 60px;
+        padding: 25px 0;
+        background:$sub-color;
+        font-size: 3.2rem;
+        font-weight: normal;
+        text-align: center;
+        color: #fff;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            width: 234px;
+            height: 60px;
+            margin-left: -117px;
+            background: url("../img/bg_arrow.png") top center no-repeat;
+        }
+      }
+
+      .inr-box{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 960px;
+        h2{
+          font-weight: normal;
+          font-size: 3.6rem;
+        }
+      }
+    }
+
+    .reason01{
+      .inr-box{
+        h2{
+          &:before{
+            display: inline-block;
+            content: '';
+            width: 95px;
+            height: 95px;
+            background: url("../img/ico_point01.png") center center no-repeat;
+          }
+        }
+      }
+    }
+
+  }
 
 
 
