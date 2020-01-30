@@ -37,6 +37,7 @@ a{
 
 .marker{
   background: linear-gradient(transparent 50%, #f5d000 50%);
+  font-weight: bold;
 }
 
 
@@ -156,13 +157,15 @@ main{
 
 
   .contact-box{
-    margin: 0 auto 150px;
     width: 100%;
-    max-width: 960px;
+    margin-bottom: 150px;
+
 
     ul{
       display: flex;
       justify-content: center;
+      max-width: 960px;
+      margin: 0 auto;
 
       li{
         padding: 0 5%;
@@ -180,6 +183,16 @@ main{
           text-align: center;
           background:$sub-color;
         }
+      }
+    }
+
+    &.contact-box-blue{
+      margin-bottom: 90px;
+      padding: 70px 0 50px;
+      background:$main-color;
+
+      .btn-mail{
+        border-right: 1px solid #fff;
       }
     }
   }
@@ -217,8 +230,24 @@ main{
         width: 100%;
         max-width: 960px;
         h2{
+          display: flex;
+          align-items: center;
+          justify-content: center;
           font-weight: normal;
           font-size: 3.6rem;
+          &:before{
+            margin-right: 20px;
+          }
+        }
+        .txt{
+          margin: 50px 0;
+          font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+          font-weight: 500;
+          font-size: 2.0rem;
+        }
+        .img{
+          margin: 0 0 80px;
+          text-align: center;
         }
       }
     }
@@ -232,6 +261,34 @@ main{
             width: 95px;
             height: 95px;
             background: url("../img/ico_point01.png") center center no-repeat;
+          }
+        }
+      }
+    }
+
+    .reason02{
+      .inr-box{
+        h2{
+          &:before{
+            display: inline-block;
+            content: '';
+            width: 95px;
+            height: 95px;
+            background: url("../img/ico_point02.png") center center no-repeat;
+          }
+        }
+      }
+    }
+
+    .reason03{
+      .inr-box{
+        h2{
+          &:before{
+            display: inline-block;
+            content: '';
+            width: 95px;
+            height: 95px;
+            background: url("../img/ico_point03.png") center center no-repeat;
           }
         }
       }
