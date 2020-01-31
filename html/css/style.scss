@@ -45,6 +45,14 @@ a{
 main{
   font-family: "Yu Mincho", "YuMincho", serif;
 
+  .txt{
+    margin: 50px 0;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-weight: 500;
+    font-size: 2.0rem;
+  }
+
+
   /* ========================================================
   ヘッダー
   =========================================================*/
@@ -233,17 +241,10 @@ main{
           display: flex;
           align-items: center;
           justify-content: center;
-          font-weight: normal;
           font-size: 3.6rem;
           &:before{
             margin-right: 20px;
           }
-        }
-        .txt{
-          margin: 50px 0;
-          font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
-          font-weight: 500;
-          font-size: 2.0rem;
         }
         .img{
           margin: 0 0 80px;
@@ -296,6 +297,110 @@ main{
 
   }
 
+
+  /* ========================================================
+  国産にこだわる想い
+  =========================================================*/
+
+  .commit{
+    margin: 0 auto 90px;
+    max-width: 960px;
+    .tit{
+      text-align: center;
+      font-size: 3.6rem;
+    }
+  }
+
+  /* ========================================================
+  ギャラリー
+  =========================================================*/
+
+  .gallery{
+    padding: 70px 0 100px;
+    background: #f6f6f6;
+    .inr-box{
+      margin: 0 auto 90px;
+      max-width: 960px;
+      .tit{
+        padding-bottom: 30px;
+        text-align: center;
+        font-size: 3.2rem;
+
+        &:after{
+          content: "";
+          display: block;
+          margin: 20px auto 40px;
+          background: $main-color;
+          width: 70px;
+          height: 4px;
+        }
+      }
+    }
+
+    ul.variation{
+      max-width: 820px;
+      margin: 40px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      li{
+        margin-bottom: 20px;
+        width: 33%;
+      }
+    }
+  }
+
+  /* スライド */
+  .swiper-container{
+    max-width: 840px;
+    .swiper-button-next, .swiper-button-prev{
+      display: none;
+    }
+    .swiper-pagination{
+      position: static;
+    }
+    .swiper-pagination-bullet{
+      margin: 0 12px;
+      width: 12px;
+      height: 12px;
+    }
+    .swiper-pagination-bullet-active{
+      background: $sub-color;
+    }
+  }
+
+  /* ========================================================
+  ご相談方法
+  =========================================================*/
+
+  .howto{
+    margin: 0 auto;
+    padding: 70px 0 100px;
+    max-width: 960px;
+    h1.tit{
+      padding-bottom: 30px;
+      color:  $sub-color;
+      text-align: center;
+      font-size: 3.2rem;
+
+      &:after{
+        content: "";
+        display: block;
+        margin: 20px auto 40px;
+        background: $sub-color;
+        width: 70px;
+        height: 4px;
+      }
+    }
+
+    .lead{
+      margin-bottom: 50px;
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+  }
 
 
 }

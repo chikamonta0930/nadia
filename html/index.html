@@ -12,6 +12,7 @@
 	<!-- Example: <link rel="apple-touch-icon-precomposed" href="/favicon-152.png"> -->
 
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
 </head>
 <body>
 	<main>
@@ -119,31 +120,33 @@
 			</section>
 
 			<section class="gallery">
-				<h1 class="tit">国産にこだわった様々なお仏壇を取り揃えています。</h1>
-				<!-- Slider main container -->
-				<div class="swiper-container">
-				    <!-- Additional required wrapper -->
-				    <div class="swiper-wrapper">
-				        <!-- Slides -->
-				        <div class="swiper-slide"><img src="img/img_slide01.png" alt=""></div>
-				        <div class="swiper-slide"><img src="img/img_slide02.png" alt=""></div>
-				        ...
-				    </div>
-				    <!-- If we need pagination -->
-				    <div class="swiper-pagination"></div>
+				<div class="inr-box">
+					<h1 class="tit">国産にこだわった様々なお仏壇を取り揃えています。</h1>
+					<!-- Slider main container -->
+					<div class="swiper-container">
+					    <!-- Additional required wrapper -->
+					    <div class="swiper-wrapper">
+					        <!-- Slides -->
+					        <div class="swiper-slide"><img src="img/img_slide01.png" alt=""></div>
+					        <div class="swiper-slide"><img src="img/img_slide02.png" alt=""></div>
+					    </div>
+					    <!-- If we need pagination -->
+					    <div class="swiper-pagination"></div>
 
-				    <!-- If we need navigation buttons -->
-				    <div class="swiper-button-prev"></div>
-				    <div class="swiper-button-next"></div>
+					    <!-- If we need navigation buttons -->
+					    <div class="swiper-button-prev"></div>
+					    <div class="swiper-button-next"></div>
+					</div>
+
+					<ul class="variation">
+						<li><img src="img/img_butsudan01.png" alt="伝統型唐木仏壇"></li>
+						<li><img src="img/img_butsudan02.png" alt="都市型唐木仏壇"></li>
+						<li><img src="img/img_butsudan03.png" alt="みかげ塗り仏壇"></li>
+						<li><img src="img/img_butsudan04.png" alt="都市型仏壇"></li>
+						<li><img src="img/img_butsudan05.png" alt="上置き型仏壇"></li>
+						<li><img src="img/img_butsudan06.png" alt="パーソナル壇"></li>
+					</ul>
 				</div>
-				<ul>
-					<li><img src="img/img_butsudan01.png" alt="伝統型唐木仏壇"></li>
-					<li><img src="img/img_butsudan02.png" alt="都市型唐木仏壇"></li>
-					<li><img src="img/img_butsudan03.png" alt="みかげ塗り仏壇"></li>
-					<li><img src="img/img_butsudan04.png" alt="都市型仏壇"></li>
-					<li><img src="img/img_butsudan05.png" alt="上置き型仏壇"></li>
-					<li><img src="img/img_butsudan06.png" alt="パーソナル壇"></li>
-				</ul>
 			</section>
 
 			<section class="howto">
@@ -276,6 +279,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
 <script type="text/javascript">
 $(function() {
   //最初は全てのパネルを非表示に
@@ -286,6 +290,18 @@ $(function() {
       $('+dd', this).slideToggle(500);
     })
 });
+
+var mySwiper = new Swiper ('.swiper-container', {
+		// Optional parameters
+		direction: 'horizontal',
+		loop: true,
+	autoplay: 2000,
+	speed: 1000,
+	effect: 'slide',
+	 // If we need pagination
+	pagination: '.swiper-pagination',
+
+	});
 </script>
 </body>
 </html>
