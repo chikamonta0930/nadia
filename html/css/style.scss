@@ -195,7 +195,7 @@ main{
     }
 
     &.contact-box-blue{
-      margin-bottom: 90px;
+      margin-bottom: 0;
       padding: 70px 0 50px;
       background:$main-color;
 
@@ -303,7 +303,8 @@ main{
   =========================================================*/
 
   .commit{
-    margin: 0 auto 90px;
+    margin: 0 auto;
+    padding: 90px 0;
     max-width: 960px;
     .tit{
       text-align: center;
@@ -324,6 +325,7 @@ main{
       .tit{
         padding-bottom: 30px;
         text-align: center;
+        color: $main-color;
         font-size: 3.2rem;
 
         &:after{
@@ -393,14 +395,136 @@ main{
         height: 4px;
       }
     }
-
     .lead{
       margin-bottom: 50px;
       text-align: center;
       font-size: 2.4rem;
       font-weight: bold;
     }
+    .step-box{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .txt-box{
+        width: 70%;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+
+        .tit{
+          margin-bottom: 15px;
+          font-size: 1.8rem;
+          font-weight: bold;
+        }
+
+        .txt{
+          margin:0;
+            font-weight: 500;
+            font-size: 1.6rem;
+        }
+      }
+    }
   }
+
+  /* ========================================================
+  FAQ（よくあるご質問）
+  =========================================================*/
+  .faq{
+    background: #f6f6f6;
+  .inr-box{
+  margin: 0 auto;
+  padding: 70px 0 100px;
+  max-width: 960px;
+    h1.tit{
+      padding-bottom: 30px;
+      color:  $main-color;
+      text-align: center;
+      font-size: 3.2rem;
+
+      &:after{
+        content: "";
+        display: block;
+        margin: 20px auto 40px;
+        background: $main-color;
+        width: 70px;
+        height: 4px;
+      }
+    }
+
+      .panel{
+        margin-bottom: 30px;
+
+        &:last-of-type{
+          margin-bottom:60px;
+        }
+          > dt {
+            display: flex;
+            align-items: center;
+            background: $sub-color;
+            cursor: pointer;
+            padding: 15px 40px;
+            font-size: 2.2rem;
+            color: #fff;
+
+            &:before{
+              content: "";
+              display: block;
+              margin-right: 20px;
+              width: 32px;
+              height: 30px;
+              background: url("../img/ico_question.png") top left no-repeat;
+            }
+          }
+
+          > dd {
+            display: flex;
+            padding: 30px 40px 60px;
+            background: #fff;
+
+            &:before{
+              content: "";
+              display: block;
+              margin-right: 20px;
+              width: 29px;
+              height: 28px;
+              background: url("../img/ico_answer.png") top left no-repeat;
+            }
+
+            .txt-box{
+              span.tit{
+                color: $sub-color;
+                font-size: 2.2rem;
+                font-weight: bold;
+              }
+
+              span.txt{
+                font-size: 1.8rem;
+              }
+            }
+                      }
+
+          &:nth-of-type(even){
+            >dt{
+               background: $main-color;
+            }
+        }
+      }
+
+      .consult-box{
+        background: #fff;
+        border:2px solid $main-color;
+        text-align: center;
+
+        .consult-txt{
+          padding: 40px 0;
+          color: $main-color;
+          font-size: 2.4rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+
 
 
 }

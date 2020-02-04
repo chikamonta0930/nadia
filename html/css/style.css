@@ -439,6 +439,9 @@ main {
   /* スライド */
   /* ========================================================
   ご相談方法
+  =========================================================*/
+  /* ========================================================
+  FAQ（よくあるご質問）
   =========================================================*/ }
   main .txt {
     margin: 50px 0;
@@ -537,7 +540,7 @@ main {
           text-align: center;
           background: #2f50a3; }
     main .contact-box.contact-box-blue {
-      margin-bottom: 90px;
+      margin-bottom: 0;
       padding: 70px 0 50px;
       background: #121e3d; }
       main .contact-box.contact-box-blue .btn-mail {
@@ -599,7 +602,8 @@ main {
     height: 95px;
     background: url("../img/ico_point03.png") center center no-repeat; }
   main .commit {
-    margin: 0 auto 90px;
+    margin: 0 auto;
+    padding: 90px 0;
     max-width: 960px; }
     main .commit .tit {
       text-align: center;
@@ -613,6 +617,7 @@ main {
       main .gallery .inr-box .tit {
         padding-bottom: 30px;
         text-align: center;
+        color: #121e3d;
         font-size: 3.2rem; }
         main .gallery .inr-box .tit:after {
           content: "";
@@ -668,3 +673,94 @@ main {
       text-align: center;
       font-size: 2.4rem;
       font-weight: bold; }
+    main .howto .step-box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      main .howto .step-box .txt-box {
+        width: 70%;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif; }
+        main .howto .step-box .txt-box .tit {
+          margin-bottom: 15px;
+          font-size: 1.8rem;
+          font-weight: bold; }
+        main .howto .step-box .txt-box .txt {
+          margin: 0;
+          font-weight: 500;
+          font-size: 1.6rem; }
+  main .faq {
+    background: #f6f6f6; }
+    main .faq .inr-box {
+      margin: 0 auto;
+      padding: 70px 0 100px;
+      max-width: 960px; }
+      main .faq .inr-box h1.tit {
+        padding-bottom: 30px;
+        color: #121e3d;
+        text-align: center;
+        font-size: 3.2rem; }
+        main .faq .inr-box h1.tit:after {
+          content: "";
+          display: block;
+          margin: 20px auto 40px;
+          background: #121e3d;
+          width: 70px;
+          height: 4px; }
+      main .faq .inr-box .panel {
+        margin-bottom: 30px; }
+        main .faq .inr-box .panel:last-of-type {
+          margin-bottom: 60px; }
+        main .faq .inr-box .panel > dt {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          background: #2f50a3;
+          cursor: pointer;
+          padding: 15px 40px;
+          font-size: 2.2rem;
+          color: #fff; }
+          main .faq .inr-box .panel > dt:before {
+            content: "";
+            display: block;
+            margin-right: 20px;
+            width: 32px;
+            height: 30px;
+            background: url("../img/ico_question.png") top left no-repeat; }
+        main .faq .inr-box .panel > dd {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          padding: 30px 40px 60px;
+          background: #fff; }
+          main .faq .inr-box .panel > dd:before {
+            content: "";
+            display: block;
+            margin-right: 20px;
+            width: 29px;
+            height: 28px;
+            background: url("../img/ico_answer.png") top left no-repeat; }
+          main .faq .inr-box .panel > dd .txt-box span.tit {
+            color: #2f50a3;
+            font-size: 2.2rem;
+            font-weight: bold; }
+          main .faq .inr-box .panel > dd .txt-box span.txt {
+            font-size: 1.8rem; }
+        main .faq .inr-box .panel:nth-of-type(even) > dt {
+          background: #121e3d; }
+      main .faq .inr-box .consult-box {
+        background: #fff;
+        border: 2px solid #121e3d;
+        text-align: center; }
+        main .faq .inr-box .consult-box .consult-txt {
+          padding: 40px 0;
+          color: #121e3d;
+          font-size: 2.4rem;
+          font-weight: bold; }
