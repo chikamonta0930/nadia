@@ -22,6 +22,38 @@ $main-color: #121e3d;
 $sub-color: #2f50a3;
 
 
+$widthSP: 1170px;		//スマートフォン
+
+@mixin sp {
+	@media (max-width: ($widthSP)) {
+		@content;
+	}
+}
+
+.pc{
+  @include sp {
+    display: none;
+  }
+}
+
+.sp{
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+
+img{
+	vertical-align: bottom;
+	@include sp {
+		width: 100%;
+	}
+}
+
+
+
+
+
 li{
   list-style: none;
 }
@@ -38,6 +70,10 @@ a{
 .marker{
   background: linear-gradient(transparent 50%, #f5d000 50%);
   font-weight: bold;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 
@@ -70,6 +106,10 @@ main{
       position:relative;
       margin: 0 0 260px;
 
+      @include sp {
+      }
+
+
 
       .inr-box{
         position: absolute;
@@ -82,6 +122,10 @@ main{
         background: #f4f7ff;
         border-top:5px solid $main-color;
         border-bottom:5px solid $main-color;
+        @include sp {
+          position: static;
+          width: 100%;
+        }
 
       }
 
@@ -93,6 +137,12 @@ main{
         font-size: 3.4rem;
         font-weight: normal;
         text-align: center;
+
+        @include sp {
+          padding: 10px 5%;
+          font-size: 2.4rem;
+        }
+
       }
 
       ul{
@@ -525,6 +575,55 @@ main{
   }
 
 
+  /* ========================================================
+　会社概要
+  =========================================================*/
+
+  .company{
+    margin: 90px auto 60px;
+    padding: 40px;
+    max-width: 960px;
+    border:2px solid #ccc;
+
+    h1{
+      margin-bottom: 40px;
+    }
+
+    dl.txt{
+      font-size: 1.8rem;
+      overflow: hidden;
+      dt{
+        margin-right: 20px;
+        width: 80px;
+        font-weight: bold;
+        float: left;
+      }
+    }
+
+    .g-map iframe{
+      width: 100%;
+      max-width: 850px;
+    }
+  }
 
 
+}
+
+
+/* ========================================================
+　footer
+=========================================================*/
+
+
+footer{
+    margin: 0 auto;
+    max-width: 960px;
+
+    p.copy {
+        padding: 20px 0;
+        border-top: 1px solid #000;
+        font-weight: bold;
+        font-size: 1.4rem;
+        text-align: center;
+    }
 }

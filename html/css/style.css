@@ -401,6 +401,22 @@ a {
   a:active {
     color: #00a0e9; }
 
+@media (max-width: 1170px) {
+  .pc {
+    display: none; } }
+
+.sp {
+  display: none; }
+  @media (max-width: 1170px) {
+    .sp {
+      display: block; } }
+
+img {
+  vertical-align: bottom; }
+  @media (max-width: 1170px) {
+    img {
+      width: 100%; } }
+
 li {
   list-style: none; }
 
@@ -418,6 +434,9 @@ a {
   background: -o-linear-gradient(transparent 50%, #f5d000 50%);
   background: linear-gradient(transparent 50%, #f5d000 50%);
   font-weight: bold; }
+
+html {
+  scroll-behavior: smooth; }
 
 main {
   font-family: "Yu Mincho", "YuMincho", serif;
@@ -442,6 +461,9 @@ main {
   =========================================================*/
   /* ========================================================
   FAQ（よくあるご質問）
+  =========================================================*/
+  /* ========================================================
+　会社概要
   =========================================================*/ }
   main .txt {
     margin: 50px 0;
@@ -464,6 +486,10 @@ main {
       background: #f4f7ff;
       border-top: 5px solid #121e3d;
       border-bottom: 5px solid #121e3d; }
+      @media (max-width: 1170px) {
+        main .header .reason-box .inr-box {
+          position: static;
+          width: 100%; } }
     main .header .reason-box .tit {
       padding: 10px 0;
       background: #fff;
@@ -471,6 +497,10 @@ main {
       font-size: 3.4rem;
       font-weight: normal;
       text-align: center; }
+      @media (max-width: 1170px) {
+        main .header .reason-box .tit {
+          padding: 10px 5%;
+          font-size: 2.4rem; } }
     main .header .reason-box ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -764,3 +794,34 @@ main {
           color: #121e3d;
           font-size: 2.4rem;
           font-weight: bold; }
+  main .company {
+    margin: 90px auto 60px;
+    padding: 40px;
+    max-width: 960px;
+    border: 2px solid #ccc; }
+    main .company h1 {
+      margin-bottom: 40px; }
+    main .company dl.txt {
+      font-size: 1.8rem;
+      overflow: hidden; }
+      main .company dl.txt dt {
+        margin-right: 20px;
+        width: 80px;
+        font-weight: bold;
+        float: left; }
+    main .company .g-map iframe {
+      width: 100%;
+      max-width: 850px; }
+
+/* ========================================================
+　footer
+=========================================================*/
+footer {
+  margin: 0 auto;
+  max-width: 960px; }
+  footer p.copy {
+    padding: 20px 0;
+    border-top: 1px solid #000;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center; }

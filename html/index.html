@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta name="viewport" content="width=1200"> -->
 
 	<title>おぶつだんのナディア</title>
 	<meta name="description" content="">
@@ -20,11 +21,14 @@
 		<!-- mainvisual -->
 		<section class="header">
 
-			<h1 class="visual"><img src="img/main-visual.png" alt=""></h1>
+			<h1 class="visual">
+				<img class="pc" src="img/main-visual.png" alt="">
+				<img class="sp "src="img/main-visual_sp.png" alt="">
+			</h1>
 
 			<div class="reason-box">
 				<div class="inr-box">
-					<h2 class="tit">おぶつだんのナディアが選ばれる理由</h2>
+					<h2 class="tit">おぶつだんのナディアが<br class="sp">選ばれる理由</h2>
 					<ul>
 						<li class="point01">
 						<a href="#case01">
@@ -55,8 +59,8 @@
 					</div>
 					<div class="contact-box">
 						<ul>
-							<li class="btn-mail"><a href="#"><img src="img/btn_mail.png" alt="ご相談はこちら"></a></li>
-							<li><img src="img/tel.png" alt=""></li>
+							<li class="btn-mail"><a href="mailto:minami@nadia8228.com"><img src="img/btn_mail.png" alt="ご相談はこちら"></a></li>
+							<li><a href="tel:0721298228"><img src="img/tel.png" alt=""></a></li>
 						</ul>
 					</div>
 			</section>
@@ -104,8 +108,8 @@
 
 			<div class="contact-box contact-box-blue">
 				<ul>
-					<li class="btn-mail"><a href="#"><img src="img/btn_mail.png" alt="ご相談はこちら"></a></li>
-					<li><img src="img/tel_wh.png" alt=""></li>
+					<li class="btn-mail"><a href="mailto:minami@nadia8228.com"><img src="img/btn_mail.png" alt="ご相談はこちら"></a></li>
+					<li><a href="tel:0721298228"><img src="img/tel_wh.png" alt=""></a></li>
 				</ul>
 			</div>
 
@@ -182,8 +186,8 @@
 
 			<div class="contact-box contact-box-blue">
 				<ul>
-					<li class="btn-mail"><a href="#"><img src="img/btn_mail.png" alt="ご相談はこちら"></a></li>
-					<li><img src="img/tel_wh.png" alt=""></li>
+					<li class="btn-mail"><a href="mailto:minami@nadia8228.com"><img src="img/btn_mail.png" alt="ご相談はこちら"></a></li>
+					<li><a href="tel:0721298228"><img src="img/tel_wh.png" alt=""></a></li>
 				</ul>
 			</div>
 
@@ -242,14 +246,14 @@
 
 			<div class="contact-box contact-box-blue">
 				<ul>
-					<li class="btn-mail"><a href="#"><img src="img/btn_mail.png" alt="ご相談はこちら"></a></li>
-					<li><img src="img/tel_wh.png" alt=""></li>
+					<li class="btn-mail"><a href="mailto:minami@nadia8228.com"><img src="img/btn_mail.png" alt="ご相談はこちら"></a></li>
+					<li><a href="tel:0721298228"><img src="img/tel_wh.png" alt=""></a></li>
 				</ul>
 			</div>
 
 			<section class="company">
 				<h1>おぶつだんのナディア（ナディア株式会社）</h1>
-				<dl>
+				<dl class="txt">
 					<dt>代表者</dt>
 					<dd>代表取締役 南 穰祐</dd>
 					<dt>所在地</dt>
@@ -264,8 +268,8 @@
 
 			<div class="contact-box">
 				<ul>
-					<li><a href="#"><img src="img/btn_mail.png" alt="ご相談はこちら"></a></li>
-					<li><img src="img/tel.png" alt=""></li>
+					<li class="btn-mail"><a href="mailto:minami@nadia8228.com"><img src="img/btn_mail.png" alt="ご相談はこちら"></a></li>
+					<li><a href="tel:0721298228"><img src="img/tel.png" alt=""></a></li>
 				</ul>
 			</div>
 
@@ -279,28 +283,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
-<script type="text/javascript">
-$(function() {
-  //最初は全てのパネルを非表示に
-  $('.panel > dd').hide();
-  $('.panel > dt')
-    .click(function(e){
- //選択したパネルを開く
-      $('+dd', this).slideToggle(500);
-    })
-});
-
-var mySwiper = new Swiper ('.swiper-container', {
-		// Optional parameters
-		direction: 'horizontal',
-		loop: true,
-	autoplay: 2000,
-	speed: 1000,
-	effect: 'slide',
-	 // If we need pagination
-	pagination: '.swiper-pagination',
-
-	});
-</script>
+<script type="text/javascript" src="js/style.js"></script>
 </body>
 </html>
